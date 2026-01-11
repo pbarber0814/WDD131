@@ -6,10 +6,12 @@ body {
 }
 
 h1 {
+    font-family:'Century', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 h4 {
