@@ -47,8 +47,9 @@ p {
     width: 600px;
     margin: 60px auto;
     padding: 50px;
-    border-width: 50px;
     text-align: left;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
 }
 
 ol {
@@ -65,4 +66,28 @@ img {
     display: block;
     width: 180px;
     margin: 50px auto 0;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light #content {
+    background-color: #ffffff;
+    border-color: #ddd;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark #content {
+    background-color: #1e1e1e;
+    border-color: #555;
+}
+
+body.dark h2 {
+    color: #9bbcff;
 }
