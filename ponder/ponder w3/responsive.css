@@ -80,6 +80,9 @@ footer {
     nav a {
         display: inline;
     }
+    nav.hide {
+        display: block;
+    }
     
 }
 
@@ -90,6 +93,9 @@ footer {
     }
     nav {
         text-align: right;
+        display: block;
+    }
+    nav.hide {
         display: block;
     }
 }          
