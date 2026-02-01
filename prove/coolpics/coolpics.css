@@ -72,6 +72,27 @@ footer {
     text-align: center;
     font-size: 0.9rem;
 }
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: none;
+}
+
+dialog img {
+  width: 90%;
+  display: block;
+  margin: 20vh auto;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10vh;
+  right: 5vh;
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  cursor: pointer;
+}
           
 
 @media screen and (min-width: 700px) {
@@ -107,4 +128,8 @@ footer {
     .menu-btn {
         display: none;
     }
+    dialog img {
+    width: 60%;
+    margin: 15vh auto;
+  }
 }          
