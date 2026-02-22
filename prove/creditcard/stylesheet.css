@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: grid;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.card-front {
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "total icon"
+    "number number"
+    "holder holder"
+    "exp-label exp-label"
+    "month year";
+
+  gap: 12px;
+
+  z-index: 2;
+}
+
+.card-header-total {
+  grid-area: total;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-header-icon {
+  grid-area: icon;
+  text-align: right;
+}
+
+.card-number {
+  grid-area: number;
+}
+
+.card-holder {
+  grid-area: holder;
+}
+
+.exp-label {
+  grid-area: exp-label;
+  text-align: left;
+}
+
+.exp-month {
+  grid-area: month;
+}
+
+.exp-year {
+  grid-area: year;
+}
+
+.card-back {
+  background-color: #cfcfcf;
+  border-radius: 15px;
+  padding: 25px;
+  position: absolute;
+  top: 55px;
+  left: 80px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+.magnetic-strip {
+  background-color: black;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+.card-back {
+  display: grid;
+  justify-content: end;
+}
+
+.card-back label {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.card-back input {
+  width: 80px;
+}
+
+
+label {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #43a047;
+}
+
+
+.errors {
+  color: red;
+  white-space: pre-line;
+  margin-bottom: 15px;
+}
