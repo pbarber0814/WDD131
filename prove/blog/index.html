@@ -7,6 +7,8 @@
     <meta name="author" content="Preston Barber">
     <meta name="description" content="A kids book review blog">
     <link href="blog.css" rel="stylesheet">
+    <script defer src="blog.js"></script>
+
 </head>
 <body>
     <header class="site-header">
@@ -17,22 +19,13 @@
             <a href="#">Search</a>
         </nav>
     </header>
-    <main class="book" role="main">
-        <div class="meta" aria-label="Book information">
-            <p aria-label="Publish date">July 5, 2022</p>
-            <p aria-label="Age Range">10-14</p>
-            <p aria-label="Genre">Fantasy</p>
-            <p aria-label="4 out of 5 stars">★★★★</p>
-        </div>
-        <section class="content">
-            <h2>Septimus Heap Book One: Magyk</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg" alt="Book cover for Magyk by Angie Sage">
-            <p>If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.</p>
-        </section>
-    </main>
+
+    <main id="book-list" role="main"></main>
+
     <footer class="site-footer">
         Jane Doe
     </footer>
-    
+
+    <script defer src="blog.js"></script>
 </body>
 </html>
