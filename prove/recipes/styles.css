@@ -1,0 +1,168 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f6f6f6;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+main{
+    width:100%;
+    max-width:800px;
+}
+
+/* HEADINGS */
+
+h1,h2{
+    font-family:'Amatic SC', cursive;
+    margin:0;
+}
+
+/* HEADER */
+
+.site-header{
+    margin-top:20px;
+    margin-bottom:15px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+}
+
+.logo h1{
+    font-size:48px;
+}
+
+/* SEARCH BAR */
+
+.search{
+    display:flex;
+    margin-bottom:20px;
+}
+
+.search input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-right:none;
+    border-radius:6px 0 0 6px;
+}
+
+.search button{
+    border:1px solid #ccc;
+    background:white;
+    padding:10px;
+    border-radius:0 6px 6px 0;
+    cursor:pointer;
+}
+
+.search img{
+    width:18px;
+}
+
+/* RECIPE CARD */
+
+.recipe{
+    display:flex;
+    flex-direction:column;
+    background:white;
+    border:1px solid #ccc;
+    border-radius:6px;
+    overflow:hidden;
+    max-width:450px;
+    margin:auto;
+}
+
+.recipe img{
+    width:100%;
+    display:block;
+}
+
+.recipe-info{
+    padding:15px;
+}
+
+.tag{
+    display:inline-block;
+    background:#eee;
+    border-radius:4px;
+    padding:4px 8px;
+    font-size:.8rem;
+    margin-bottom:8px;
+}
+
+.recipe-info h2{
+    color:#1a73e8;
+    font-size:32px;
+    margin:5px 0;
+}
+
+.rating{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.description{
+    display:none;
+    font-size:.9rem;
+    color:#444;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:20px;
+    margin-bottom:30px;
+    width:100%;
+    max-width:800px;
+}
+
+footer a{
+    font-size:.8rem;
+}
+
+.social{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    margin-top:10px;
+}
+
+.social img{
+    width:26px;
+}
+
+/* DESKTOP VIEW */
+
+@media screen and (min-width:700px){
+
+.recipe{
+    flex-direction:row;
+}
+
+.recipe img{
+    width:45%;
+}
+
+.recipe-info{
+    flex:1;
+}
+
+.description{
+    display:block;
+}
+
+}
