@@ -287,18 +287,23 @@ function random(num){
 
 
 function tagsTemplate(tags){
-    return tags.map(tag => `<span class="tag">${tag}</span>`).join("")
+    return tags.map(tag => `<span class="tag">${tag.charAt(0).toUpperCase() + tag.slice(1)}</span>`).join("")
 }
 
 function ratingTemplate(rating){
 
     const fullStars = Math.floor(rating)
-    const emptyStars = 5 - fullStars
+    const halfstar = rating % 1 >= 0.5
+    const emptyStars = 5 - fullStars - (halfstar ? 1 : 0)
 
     let stars = ""
 
     for(let i = 0; i < fullStars; i++){
         stars += `<span aria-hidden="true" class="icon-star">⭐</span>`
+    }
+
+    if (halfstar) {
+        stars += `<span aria-hidden="true">⭐</span>`
     }
 
     for(let i = 0; i < emptyStars; i++){
