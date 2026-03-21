@@ -1,3 +1,4 @@
+
 *{
     box-sizing:border-box;
 }
@@ -6,28 +7,22 @@ body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
     background:#f6f6f6;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 main{
     width:100%;
-    max-width:800px;
+    max-width:700px;
+    margin:auto;
+    padding:20px;
 }
-
-/* HEADINGS */
 
 h1,h2{
     font-family:'Amatic SC', cursive;
     margin:0;
 }
 
-/* HEADER */
-
 .site-header{
-    margin-top:20px;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 .logo{
@@ -45,11 +40,10 @@ h1,h2{
     font-size:48px;
 }
 
-/* SEARCH BAR */
-
 .search{
     display:flex;
     margin-bottom:20px;
+    padding:5px;
 }
 
 .search input{
@@ -72,8 +66,6 @@ h1,h2{
     width:18px;
 }
 
-/* RECIPE CARD */
-
 .recipe{
     display:flex;
     flex-direction:column;
@@ -81,8 +73,6 @@ h1,h2{
     border:1px solid #ccc;
     border-radius:6px;
     overflow:hidden;
-    max-width:450px;
-    margin:auto;
 }
 
 .recipe img{
@@ -121,13 +111,15 @@ h1,h2{
     color:#444;
 }
 
-/* FOOTER */
-
 footer{
-    margin-top:20px;
-    margin-bottom:30px;
-    width:100%;
-    max-width:800px;
+    margin-top:25px;
+    padding:15px 0;
+    border-top:1px solid #ddd;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
 }
 
 footer a{
@@ -136,16 +128,12 @@ footer a{
 
 .social{
     display:flex;
-    justify-content:flex-end;
     gap:10px;
-    margin-top:10px;
 }
 
 .social img{
     width:26px;
 }
-
-/* DESKTOP VIEW */
 
 @media screen and (min-width:700px){
 
@@ -163,6 +151,12 @@ footer a{
 
 .description{
     display:block;
+}
+
+footer{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
 }
 
 }
