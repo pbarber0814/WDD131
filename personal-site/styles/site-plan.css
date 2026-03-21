@@ -1,16 +1,13 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
 
 :root {
-  /* Your actual color palette */
+  /* Color palette */
   --primary-color: #1f1f1f;
   --secondary-color: #4caf50;
   --accent1-color: #ffffff;
   --accent2-color: #222222;
 
-  /* Your chosen fonts */
+  /* Fonts */
   --heading-font: Arial, sans-serif;
   --paragraph-font: Verdana, sans-serif;
 
@@ -22,8 +19,6 @@ Fonts are separated by a | */
   --paragraph-color-on-color: white;
 
   --paragraph-background-color: var(--primary-color);
-
-  /* FIXED (this was missing before 🚨) */
   --paragraph-color: var(--primary-color);
 
   /* Navigation */
