@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
 
 :root {
   /* Color palette */
@@ -8,8 +8,8 @@
   --accent2-color: #222222;
 
   /* Fonts */
-  --heading-font: Arial, sans-serif;
-  --paragraph-font: Verdana, sans-serif;
+  --heading-font: 'Press Start 2P', cursive;
+  --paragraph-font: 'Roboto', sans-serif;
 
   /* Text + background usage */
   --headline-color-on-white: var(--primary-color);

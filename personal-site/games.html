@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Preston Barber">
+    <meta name="description" content="Gaming Almanac - Games Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Gaming Almanac</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo.png" alt="Gaming Almanac Logo" class="logo">
+        <h1>Gaming Almanac</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h2>Favorite Games</h2>
+
+        <!-- GAME CARD -->
+        <section id="game-card">
+
+            <img id="game-image" src="images/placeholder.jpg" alt="Game Image">
+
+            <h3 id="game-title">Game Title</h3>
+
+            <p id="game-description">
+                Game description will appear here.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+
+            <!-- GALLERY BUTTON -->
+            <button id="gallery-btn">View Gallery</button>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL (HIDDEN BY DEFAULT) -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+
+            <h3>Game Gallery</h3>
+
+            <div id="gallery-container">
+                <!-- Images will be inserted with JavaScript -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Gaming Almanac | Preston Barber</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
