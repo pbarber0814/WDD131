@@ -18,6 +18,7 @@
         <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="games.html">Games</a>
+            <a href="site-plan.html">Site Plan</a>
         </nav>
     </header>
 
@@ -25,23 +26,23 @@
         <h2>Favorite Games</h2>
 
         <section id="game-card">
-            <img id="game-image" src="images/placeholder.jpg" alt="Game Image">
+            <img id="game-image" src="images/placeholder.jpg" alt="Displayed Video Game">
             <h3 id="game-title">Game Title</h3>
-            <p id="game-description">
+            <p id="game-description" aria-live="polite">
                 Game description will appear here.
             </p>
 
             <div class="buttons">
                 <button type="button" id="prev-btn" aria-label="Show previous game">Previous</button>
-                <button ype="button" id="next-btn" aria-label="Show next game">Next</button>
+                <button type="button" id="next-btn" aria-label="Show next game">Next</button>
             </div>
 
-            <button id="gallery-btn" aria-label="Open image gallery for this game">View Gallery</button>
+            <button type="button" id="gallery-btn" aria-label="Open image gallery for this game">View Gallery</button>
         </section>
 
     </main>
 
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
         <div class="modal-content">
             <span id="close-modal" aria-label="Close gallery" role="button">&times;</span>
             <h3>Game Gallery</h3>
@@ -50,7 +51,7 @@
         </div>
     </div>
 
-    <div id="image-viewer" class="image-viewer">
+    <div id="image-viewer" class="image-viewer" role="dialog" aria-modal="true">
         <span id="close-viewer" aria-label="Close full screen image" role="button">&times;</span>
         <img id="viewer-img" src="#" alt="Full Image">
     </div>
