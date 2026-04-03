@@ -3,7 +3,7 @@ const games = [
     {
         title: "Minecraft",
         image: "images/minecraft.jpg",
-        description: "A sandbox game where players can build, explore, and survive in a blocky world.",
+        description: "A sandbox game where players can build, explore, and survive in a blocky world. What I really enjoy about Minecraft, is the limitless possibilities. If you can think it, you can do it. I really enjoy the logistical challenges that come with gathering resources, managing your time, completing challenges, and creating systems the aid your survival.",
         gallery: [
             "images/minecraft1.png",
             "images/minecraft2.jpg",
@@ -13,7 +13,7 @@ const games = [
     {
         title: "Skyrim",
         image: "images/skyrim.jpg",
-        description: "An open-world RPG where players explore a fantasy world, complete quests, and battle dragons.",
+        description: "An open-world RPG where players explore a fantasy world, complete quests, and battle dragons. I have always loved playing Skyrim. The open-world aspect allows you to feel free as you play, and the medieval time frame is always fascinating. The story lines and quests are thrilling, and there is such character within the world.",
         gallery: [
             "images/skyrim1.jpg",
             "images/skyrim2.jpg",
@@ -23,7 +23,7 @@ const games = [
     {
         title: "Assassin's Creed Valhalla",
         image: "images/valhalla.jpg",
-        description: "An action-adventure game set in the Viking age with exploration, combat, and storytelling.",
+        description: "An action-adventure game set in the Viking age with exploration, combat, and storytelling. This game combines most of my favorite aspects of Minecraft and Skyrim. You have to manage resources and complete quests to build up a viking civilization, but you also get to run around and create your own story as you discover new places, find new things, and conquer new lands.",
         gallery: [
             "images/valhalla1.jpg",
             "images/valhalla2.jpg",
@@ -47,6 +47,10 @@ const galleryBtn = document.getElementById("gallery-btn");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("close-modal");
 const galleryContainer = document.getElementById("gallery-container");
+
+const imageViewer = document.getElementById("image-viewer");
+const viewerImg = document.getElementById("viewer-img");
+const closeViewer = document.getElementById("close-viewer");
 
 // FUNCTION: DISPLAY GAME
 function displayGame(index) {
@@ -90,11 +94,17 @@ function openGallery() {
 
     // LOOP THROUGH IMAGES (ARRAY METHOD)
     game.gallery.forEach(function(imageSrc) {
-        const img = document.createElement("img");
-        img.src = imageSrc;
-        img.alt = "Game screenshot";
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.alt = "Game screenshot";
 
-        galleryContainer.appendChild(img);
+    // 🔥 CLICK EVENT FOR FULLSCREEN
+    img.addEventListener("click", function() {
+        viewerImg.src = imageSrc;
+        imageViewer.style.display = "flex";
+    });
+
+    galleryContainer.appendChild(img);
     });
 
     modal.style.display = "block";
@@ -105,11 +115,17 @@ function closeGallery() {
     modal.style.display = "none";
 }
 
+// FUNCTION: CLOSE IMAGE VIEWER
+function closeImageViewer() {
+    imageViewer.style.display = "none";
+}
+
 // EVENT LISTENERS
 nextBtn.addEventListener("click", nextGame);
 prevBtn.addEventListener("click", prevGame);
 galleryBtn.addEventListener("click", openGallery);
 closeModal.addEventListener("click", closeGallery);
+closeViewer.addEventListener("click", closeImageViewer);
 
 // INITIAL LOAD
 displayGame(currentGameIndex);
