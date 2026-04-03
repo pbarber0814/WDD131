@@ -1,6 +1,4 @@
-/* GOOGLE FONTS (already linked in HTML) */
 
-/* VARIABLES */
 :root {
   --primary: #1f1f1f;
   --secondary: #4caf50;
@@ -8,14 +6,12 @@
   --dark: #222222;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--white);
@@ -23,7 +19,6 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
 header {
   background-color: var(--primary);
   color: var(--white);
@@ -35,7 +30,6 @@ header {
   width: 80px;
 }
 
-/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -53,26 +47,27 @@ nav a:hover {
   background-color: var(--secondary);
 }
 
-/* MAIN */
 main {
   padding: 1rem;
   max-width: 1000px;
   margin: auto;
 }
 
-/* HEADINGS */
 h1, h2, h3 {
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 1rem;
 }
 
-/* HERO */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #hero {
   text-align: center;
   padding: 2rem 1rem;
 }
 
-/* ABOUT */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -84,7 +79,6 @@ h1, h2, h3 {
   border-radius: 8px;
 }
 
-/* CONTACT FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -98,7 +92,7 @@ input, textarea {
 }
 
 button {
-  background-color: var(--secondary);
+  background-color: #388e3c;
   color: var(--white);
   border: none;
   padding: 0.7rem;
@@ -110,7 +104,6 @@ button:hover {
   background-color: #45a049;
 }
 
-/* GAME CARD */
 #game-card {
   text-align: center;
   padding: 1rem;
@@ -132,7 +125,6 @@ button:hover {
   margin: 1rem 0;
 }
 
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -158,7 +150,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* GALLERY */
 #gallery-container {
   display: flex;
   gap: 1rem;
@@ -177,7 +168,6 @@ button:hover {
   transition: 0.2s;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 1rem;
@@ -186,7 +176,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* FULLSCREEN IMAGE VIEWER */
 .image-viewer {
   display: none;
   position: fixed;
@@ -223,7 +212,6 @@ footer {
   transform: scale(1.02);
 }
 
-/* RESPONSIVE (DESKTOP) */
 @media (min-width: 768px) {
 
   .about-container {
