@@ -1,13 +1,23 @@
-// ARRAY OF GAME OBJECTS
+
 const games = [
     {
         title: "Minecraft",
         image: "images/minecraft.jpg",
         description: "A sandbox game where players can build, explore, and survive in a blocky world. What I really enjoy about Minecraft, is the limitless possibilities. If you can think it, you can do it. I really enjoy the logistical challenges that come with gathering resources, managing your time, completing challenges, and creating systems the aid your survival.",
         gallery: [
-            "images/minecraft1.png",
-            "images/minecraft2.jpg",
-            "images/minecraft3.avif"
+            {
+                src: "images/minecraft1.png",
+                alt: "Minecraft landscape with trees and sunlight"
+            },
+            {
+                src: "images/minecraft2.jpg",
+                alt: "Minecraft character fighting enemies"
+            },
+            {
+                src: "images/minecraft3.avif",
+                alt: "Minecraft castle build at night"
+            }
+
         ]
     },
     {
@@ -15,9 +25,19 @@ const games = [
         image: "images/skyrim.jpg",
         description: "An open-world RPG where players explore a fantasy world, complete quests, and battle dragons. I have always loved playing Skyrim. The open-world aspect allows you to feel free as you play, and the medieval time frame is always fascinating. The story lines and quests are thrilling, and there is such character within the world.",
         gallery: [
-            "images/skyrim1.jpg",
-            "images/skyrim2.jpg",
-            "images/skyrim3.jpg"
+            {
+                src: "images/skyrim1.jpg",
+                alt: "Dragon perched atop burial crypt"
+            },
+            {
+                src: "images/skyrim2.jpg",
+                alt: "Adventurer walking through the woods"
+            },
+            {
+                src: "images/skyrim3.jpg",
+                alt: "Landscape shot of small settlement infront of mountain range"
+            }
+
         ]
     },
     {
@@ -25,17 +45,25 @@ const games = [
         image: "images/valhalla.jpg",
         description: "An action-adventure game set in the Viking age with exploration, combat, and storytelling. This game combines most of my favorite aspects of Minecraft and Skyrim. You have to manage resources and complete quests to build up a viking civilization, but you also get to run around and create your own story as you discover new places, find new things, and conquer new lands.",
         gallery: [
-            "images/valhalla1.jpg",
-            "images/valhalla2.jpg",
-            "images/valhalla3.jpg"
+            {
+                src: "images/valhalla1.jpg",
+                alt: "Vikings an their ship beneath a settlement build upon a large rocky overhang"
+            },
+            {
+                src: "images/valhalla2.jpg",
+                alt: "Viking warrior stands atop a hill overlooking a small english settlement"
+            },
+            {
+                src: "images/valhalla3.jpg",
+                alt: "Viking warrior wielding a sword and shield stands infront of a large castle"
+            }
+                      
         ]
     }
 ];
 
-// TRACK CURRENT GAME
 let currentGameIndex = 0;
 
-// SELECT DOM ELEMENTS
 const gameImage = document.getElementById("game-image");
 const gameTitle = document.getElementById("game-title");
 const gameDescription = document.getElementById("game-description");
@@ -52,7 +80,6 @@ const imageViewer = document.getElementById("image-viewer");
 const viewerImg = document.getElementById("viewer-img");
 const closeViewer = document.getElementById("close-viewer");
 
-// FUNCTION: DISPLAY GAME
 function displayGame(index) {
     const game = games[index];
 
@@ -61,11 +88,9 @@ function displayGame(index) {
     gameDescription.textContent = game.description;
 }
 
-// FUNCTION: SHOW NEXT GAME
 function nextGame() {
     currentGameIndex++;
 
-    // CONDITIONAL WRAP-AROUND
     if (currentGameIndex >= games.length) {
         currentGameIndex = 0;
     }
@@ -73,11 +98,9 @@ function nextGame() {
     displayGame(currentGameIndex);
 }
 
-// FUNCTION: SHOW PREVIOUS GAME
 function prevGame() {
     currentGameIndex--;
 
-    // CONDITIONAL WRAP-AROUND
     if (currentGameIndex < 0) {
         currentGameIndex = games.length - 1;
     }
@@ -85,22 +108,19 @@ function prevGame() {
     displayGame(currentGameIndex);
 }
 
-// FUNCTION: OPEN MODAL + LOAD GALLERY
 function openGallery() {
     const game = games[currentGameIndex];
 
-    // CLEAR OLD IMAGES
     galleryContainer.innerHTML = "";
 
-    // LOOP THROUGH IMAGES (ARRAY METHOD)
-    game.gallery.forEach(function(imageSrc) {
+    game.gallery.forEach(function(image) {
     const img = document.createElement("img");
-    img.src = imageSrc;
-    img.alt = "Game screenshot";
+    img.src = image.src;
+    img.alt = image.alt;
 
-    // 🔥 CLICK EVENT FOR FULLSCREEN
     img.addEventListener("click", function() {
-        viewerImg.src = imageSrc;
+        viewerImg.src = image.src;
+        viewerImg.alt = image.alt;
         imageViewer.style.display = "flex";
     });
 
@@ -110,22 +130,18 @@ function openGallery() {
     modal.style.display = "block";
 }
 
-// FUNCTION: CLOSE MODAL
 function closeGallery() {
     modal.style.display = "none";
 }
 
-// FUNCTION: CLOSE IMAGE VIEWER
 function closeImageViewer() {
     imageViewer.style.display = "none";
 }
 
-// EVENT LISTENERS
 nextBtn.addEventListener("click", nextGame);
 prevBtn.addEventListener("click", prevGame);
 galleryBtn.addEventListener("click", openGallery);
 closeModal.addEventListener("click", closeGallery);
 closeViewer.addEventListener("click", closeImageViewer);
 
-// INITIAL LOAD
 displayGame(currentGameIndex);
