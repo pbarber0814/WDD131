@@ -15,7 +15,7 @@
     <header>
         <img src="images/logo.png" alt="Gaming Almanac Logo" class="logo">
         <h1>Gaming Almanac</h1>
-        <nav>
+        <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="games.html">Games</a>
         </nav>
@@ -32,18 +32,18 @@
             </p>
 
             <div class="buttons">
-                <button type="button" id="prev-btn">Previous</button>
-                <button ype="button" id="next-btn">Next</button>
+                <button type="button" id="prev-btn" aria-label="Show previous game">Previous</button>
+                <button ype="button" id="next-btn" aria-label="Show next game">Next</button>
             </div>
 
-            <button id="gallery-btn">View Gallery</button>
+            <button id="gallery-btn" aria-label="Open image gallery for this game">View Gallery</button>
         </section>
 
     </main>
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span id="close-modal">&times;</span>
+            <span id="close-modal" aria-label="Close gallery" role="button">&times;</span>
             <h3>Game Gallery</h3>
             <div id="gallery-container">
             </div>
@@ -51,7 +51,7 @@
     </div>
 
     <div id="image-viewer" class="image-viewer">
-        <span id="close-viewer">&times;</span>
+        <span id="close-viewer" aria-label="Close full screen image" role="button">&times;</span>
         <img id="viewer-img" src="#" alt="Full Image">
     </div>
 
